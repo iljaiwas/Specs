@@ -12,4 +12,14 @@ Pod::Spec.new do |s|
   # TODO this lib is supported also on ios but the hook needs to be adjusted
   s.platform = :osx
   s.preserve_path = "build-mac"
+  
+  def s.pre_install (pod, _)
+    Dir.chdir(pod.root ) do
+      `tar xzf build-mac/autogen-result.tar.gz`
+      `./configure --enable-debug`
+      `make stamp-prepare-target`
+      `make libetpan-config.h`
+      raise "[!] Failed pre install hook" unless $?.to_i == 0
+    end
+  end
 end
