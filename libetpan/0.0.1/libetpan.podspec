@@ -11,7 +11,8 @@ Pod::Spec.new do |s|
   s.source_files = '*.h', 'include/**/*.{h}', 'src/**/*.{h,m}'
   # TODO this lib is supported also on ios but the hook needs to be adjusted
   s.platform = :osx
-
+  s.preserve_path = "build-mac"
+  
   def s.pre_install (pod, _)
     Dir.chdir(pod.root + 'build-mac') do
       `SRCROOT='true' sh update.sh`
