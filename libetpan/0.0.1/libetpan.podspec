@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
       `./configure --enable-debug`
       `make stamp-prepare-target`
       `make libetpan-config.h`
-      `rm -rf src/window`
+      `rm -rf src/windows`
       raise "[!] Failed pre install hook" unless $?.to_i == 0
     end
   end
