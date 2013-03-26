@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   # TODO this lib is supported also on ios but the hook needs to be adjusted
   s.platform = :osx
   s.preserve_path = "build-mac"
+  s.exclude_files = 'src/windows/*'
   
   def s.pre_install (pod, _)
     Dir.chdir(pod.root ) do
