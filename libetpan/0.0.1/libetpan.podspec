@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   def s.pre_install (pod, _)
     Dir.chdir(pod.root ) do
       `tar xzf build-mac/autogen-result.tar.gz`
-      `./configure --enable-debug`
+      `configure --enable-debug`
       `make stamp-prepare-target`
       `make libetpan-config.h`
       raise "[!] Failed pre install hook" unless $?.to_i == 0
