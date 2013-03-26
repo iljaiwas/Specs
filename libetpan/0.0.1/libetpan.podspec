@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
       `./configure --enable-debug`
       `make stamp-prepare-target`
       `make libetpan-config.h`
-      `sed -i -e 's/#include <libetpan\/libetpan.h>/\/\/#include <libetpan\/libetpan.h>/g' src/engine/mailprivacy.c`
+      `sed -i -e \'s/#include <libetpan\/libetpan.h>/\/\/#include <libetpan\/libetpan.h>/g\' src/engine/mailprivacy.c`
       raise "[!] Failed pre install hook" unless $?.to_i == 0
     end
   end
