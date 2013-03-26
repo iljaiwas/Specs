@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/dinhviethoa/libetpan'
   s.license      = { :type => 'BSD', :file => 'COPYRIGHT' }
   s.author       = 'DINH Viêt Hoà'
-  s.source       = { :git => 'https://github.com/iljaiwas/libetpan.git'}
+  s.source       = { :git => 'https://github.com/dinhviethoa/libetpan.git'}
   s.ios.deployment_target = '4.0'
   s.osx.deployment_target = '10.6'
   s.source_files = '*.h', 'src/data-types/**/*.{h,c}', 'src/driver/**/*.{h,c}', 'src/engine/**/*.{h,c}', 'src/low-level/**/*.{h,c}' 
